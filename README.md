@@ -10,3 +10,4 @@ URL:
 
 [Скомпилированные прошивки](https://github.com/miheych/carisma_bk/tree/master/Hex)
 
+[Обсуждение на сайте carisma-club.su](http://carisma-club.su/index.php?showtopic=2685)
