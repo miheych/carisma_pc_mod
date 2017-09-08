@@ -158,12 +158,6 @@ byte tx0[4][11],
 		addr[8], 
 		data[12];
 
-/*
-bitBangedSPIfast bbSPI (PORTD,  7, PIND,  6, PORTB, 8,    // MOSI port (D5), MISO pin (D6), SCK port (D7)
-                        DDRD,   7, DDRD,  6, DDRB,  8);   // MOSI ddr  (D5), MISO ddr (D6), SCK ddr  (D7)  
-*/
-//bitBangedSPI bbSPI (SOFT_MOSI_PIN, bitBangedSPI :: NO_PIN, SOFT_SCK_PIN);//
-
 OneWire  ds(TEMP_PIN); 
 
 //AltSoftSerial OBDSerial;
@@ -177,7 +171,6 @@ void setup() {
 		// return -1000;
 	}
 //настройки soft spi
-//	bbSPI.begin ();
 	pinMode (SS_PIN_OUT, OUTPUT);
 
 //обнуляем регистр управления SPI
@@ -272,7 +265,7 @@ void loop() {
 				}
 			}
 		}
- //---------------------------------------------test		
+ //---------------------------------------------for test in terminal		
 /* 		for(int p=0; p<4; p++){
 			Serial.println();
 			for (int i=0; i<11; i++){
@@ -480,7 +473,7 @@ void loop() {
 			}  
 		}  
 	}
-/*	if ((volt_result < min_voltage)&&(bl==0)&&(time_cam > 1000)){ //показ напряжения батареи при его опускании ниже порога 
+/*	if ((volt_result < min_voltage)&&(bl==0)&&(time_cam > 1000)){ //показ напряжения батареи при его опускании ниже порога. Пока не требуется
 		bl = 8;
 		blink_time = time_cam;
 		visible_flag = false;
@@ -752,6 +745,7 @@ switch (mode) {
 	}
 	break;*/
 }
+
 //сохранение режима----
 	if ((time_cam-save_time>=30000)&&(save_flag==false)){
 		EEPROM.put(0, mode);// 0 байт под номер режима
@@ -768,6 +762,8 @@ switch (mode) {
 		EEPROM.put(5, run_summ);
 		EEPROM.put(10, FuelConsInTrip);
 		EEPROM.put(14, RunInTrip);
+		
+// старая версия работы с EEPROM:		
 /* 		for (int i=0; i<4; i++){ // 1-4 байты под суммарный расход
 			val_1[i] = ((FuelConsSummary2 >> i*8) & 0xFF);
 			EEPROM.write(1+i, val_1[i]);
@@ -847,8 +843,6 @@ void MenuPrint(byte idx){
       if (cmd==set_var) ;
     }
 	} 
-//   Serial.print(input); //if(render_bit)
-//  delay(400);
 }
 void ItemPrint(byte item_id){
    int len = strlen_P(menu_items[item_id].item_name);
