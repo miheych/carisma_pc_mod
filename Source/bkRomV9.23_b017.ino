@@ -1,6 +1,5 @@
 #include <OneWire.h>
 #include <EEPROM.h>
-//#include <AltSoftSerial.h>
 #include <SoftwareSerial.h>
 //Pins OBD/MUT
 #define K_IN  9
@@ -69,7 +68,7 @@ volatile uint8_t rx[4][11];
 volatile byte pos, com;
 volatile boolean process_it;
 String 	str_dtc;
-boolean flag=false, 
+boolean 	flag=false, 
 		start_on_flag=false,
 		write_flag=false, 
 		save_flag=true, 
@@ -83,10 +82,10 @@ boolean flag=false,
 		iter_10000_flag=false,
 		Speed20LimitFlag=false,
 		DoorBlockStatus=false,
-    render_bit=true,
+		render_bit=true,
 		save_data_flag=true;
-int 	j=0, 
- init_cod,
+int 		j=0, 
+ 		init_cod,
 		tp,
 		volt_avg, 
 		volt_, 
@@ -105,7 +104,8 @@ int 	j=0,
 		LTFT,
 		Speed0,
 		Speed;
-unsigned int RPM, RPM_, 
+unsigned int 	RPM, 
+		RPM_, 
 		showParam, 
 		showParam2, 
 		readParam, 
@@ -114,7 +114,7 @@ unsigned int RPM, RPM_,
 		FuelConsumption,		
 		iter_fuel_level=0,		
 		InjPulseWidth;
-unsigned long time_cam, 
+unsigned long 	time_cam, 
 		checkTemp_time, 
 		displayU_time, 
 		MUT_Read_time,
@@ -140,7 +140,7 @@ unsigned long time_cam,
 		fuel_level,
 		DoorLockImpulsTime,
 		volt_result_long;
-byte tx0[4][11], 
+byte 		tx0[4][11], 
 		tx[4][11], 
 		rx0[4][11], 
 		mode, 
@@ -148,7 +148,7 @@ byte tx0[4][11],
 		mode_in_mem,
 		x,
 		item_count,
-   menu_page=1,
+		menu_page=1,
 		s0=5,
 		s1=5,
 		s2=5,
