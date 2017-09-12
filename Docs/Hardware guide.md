@@ -58,11 +58,11 @@
 
 Вот итоговая схема, работоспособность которой проверена на нескольких автомобилях:
 
-![](https://github.com/miheych/carisma_bk/blob/master/Connection%20schemes/rev3_with_mc33290.jpg)
+![](https://github.com/miheych/carisma_bk/blob/master/Connection%20circuit/rev3_with_mc33290.jpg)
 
 *Резистор R2 не обязателен, но дорожку под него лучше развести на плате. Возможно, потребуется впаять его, если не будут корректно отображаться температура наружнего воздуха и часы.
 
-Вариант схемы при использовании в качестве драйвера К-линии микросхемы L9637D можно посмотреть [здесь](https://github.com/miheych/carisma_bk/blob/master/Connection%20schemes/rev3_with_L9637D.jpg).
+Вариант схемы при использовании в качестве драйвера К-линии микросхемы L9637D можно посмотреть [здесь](https://github.com/miheych/carisma_bk/blob/master/Connection%20circuit/rev3_with_L9637D.jpg).
 
 Печатную плату несложно самостоятельно развести и изготовить под свои потребности методом "ЛУТ", либо воспользоваться одним из вариантов, предложенных пользователями на форуме [carisma-club](http://carisma-club.su/index.php?showtopic=2685).
 
