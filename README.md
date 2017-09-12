@@ -11,6 +11,8 @@
 
 [Инструкция по самостоятельной доработке](https://github.com/miheych/carisma_bk/blob/master/Docs/Hardware%20guide.md)
 
+[Инструкция по функционалу](https://github.com/miheych/carisma_bk/blob/master/Docs/Users%20manual.md)
+
 [Исходный код](https://github.com/miheych/carisma_bk/blob/master/Source/bkRomV9.23_b017.ino)
 
 [Скомпилированные прошивки](https://github.com/miheych/carisma_bk/tree/master/Hex)
