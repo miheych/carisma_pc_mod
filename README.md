@@ -18,3 +18,8 @@
 [Скомпилированные прошивки](https://github.com/miheych/carisma_bk/tree/master/Hex)
 
 [Обсуждение на сайте carisma-club.su](http://carisma-club.su/index.php?showtopic=2685)
+
+Удачи в реализации!
+
+
+P.S. Если кому-то понравился данный проект, и возникло желание поблагодарить автора за проделанную работу, то можно сделать это через [Yandex.Money](https://money.yandex.ru/to/410013029389266).
