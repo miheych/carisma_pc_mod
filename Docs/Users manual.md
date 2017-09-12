@@ -26,7 +26,10 @@
 
 [![](http://img.youtube.com/vi/gFz78esyOUs/0.jpg)](http://www.youtube.com/watch?v=gFz78esyOUs)
 
-Порядок режимов на видео немного отличается от приведенного выше, так как там была еще более старая версия прошивки.
+*Порядок режимов на видео может несколько отличается от реальзованного в прошивке.
+
 Чтение и сброс ошибок:
-[youtube="guMvadppkAk"]режим ошибок[/youtube]
-Также другие видео и фото готового изделия найдете если почитаете тему обсуждения.
+
+[![](http://img.youtube.com/vi/guMvadppkAk/0.jpg)](http://www.youtube.com/watch?v=guMvadppkAk)
+
+Также фото и видео готового изделия можно посмотреть в [теме](http://carisma-club.su/index.php?showtopic=2685) на форуме carisma-club.su.
