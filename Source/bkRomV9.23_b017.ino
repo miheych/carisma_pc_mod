@@ -319,10 +319,9 @@ void loop() {
 		fuel_level_avg_=(3450-fuel_level_avg)*10/3;
 	//конец расчета остатка топлива
 	//Запуск и условия процедуры MUT_init
-		if((!MUT_init_flag)&&(mode>2)&&(mode!=9)) { //INIT если нет установленной сессии и номер режима 3-8
+		if((!MUT_init_flag)&&(mode>0)&&(mode!=9)) { //INIT если нет установленной сессии и номер режима 1-8
 //		if((volt[j] > 1370)||((volt[j] < 1180)&&(volt[j] > 1100))){
 			digitalWrite(K_CONTROL, LOW); //Замыкаем НЗ реле для соединение линии K-Line
-
 			ISO_init_flag=-1;//Возвращаем надпись DTC MODE при следующем входе в режим 9
 			if (!start_on_flag) {
 				start_on_flag=true;
@@ -494,17 +493,13 @@ void loop() {
 		save_time=time_cam;
 		
 	}  
-//	if(mode!=init_mode) {
-		ModeNumb(mode);
-//	}
-//	else ModeNumb(x);	
+
+ModeNumb(mode);//отображение текущего режима
+
 switch (mode) {
   case 0: {    
     #ifdef SYSSETUP
-//		if (time_cam - MUT_Read_time>=300){
-//			MUT_Read_time = time_cam;
-      SystemSetup();
-//}
+		SystemSetup();
     #endif 
 	if ((flag==true)&&(time_cam-btn_long_press_time>3000)){
 		btn_press_time = time_cam;
@@ -584,7 +579,7 @@ switch (mode) {
 		writeSTR("SUMMARNIY RASHOD TOPLIVA",4);
 	}
 	break;
-	case 5: { //мгоновенный расход, сброс показаний среднего расхода	
+	case 5: { //мгновенный расход, сброс показаний среднего расхода	
 		if ((flag==true)&&(time_cam-btn_long_press_time>3000)){ //сброс в 0 показаний среднего расхода
 			btn_press_time = time_cam;
 			mode_change_permit_flag=false;
